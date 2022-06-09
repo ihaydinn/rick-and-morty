@@ -7,8 +7,9 @@ import android.view.ViewGroup
 import com.ismailhakkiaydin.rickandmorty.base.BaseFragment
 import com.ismailhakkiaydin.rickandmorty.databinding.ActivityMainBinding
 import com.ismailhakkiaydin.rickandmorty.databinding.FragmentCharacterBinding
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class CharacterFragment :
     BaseFragment<FragmentCharacterBinding, CharacterViewModel>(FragmentCharacterBinding::inflate) {
 
