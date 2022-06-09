@@ -1,4 +1,4 @@
-package com.ismailhakkiaydin.rickandmorty.ui
+package com.ismailhakkiaydin.rickandmorty.ui.chracter
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,10 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import com.ismailhakkiaydin.rickandmorty.base.BaseFragment
 import com.ismailhakkiaydin.rickandmorty.databinding.ActivityMainBinding
+import com.ismailhakkiaydin.rickandmorty.databinding.FragmentCharacterBinding
 
 
 class CharacterFragment :
-    BaseFragment<ActivityMainBinding, CharacterViewModel>(ActivityMainBinding::inflate) {
+    BaseFragment<FragmentCharacterBinding, CharacterViewModel>(FragmentCharacterBinding::inflate) {
 
     override fun onCreateView(
         inflater: LayoutInflater,
