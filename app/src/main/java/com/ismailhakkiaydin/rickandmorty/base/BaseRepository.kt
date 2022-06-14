@@ -16,16 +16,16 @@ abstract class BaseRepository constructor(private val dispatcher: DispatcherProv
                 val result = apiCall.invoke()
                 when ((result as Response<*>).code()) {
                     in 200..300 -> Resource.Success(result)
-                    401 -> Resource.Error("Error")
+                    401 -> Resource.Error("401: " + result.message())
                     else -> Resource.Error(result.message())
                 }
             } catch (throwable: Throwable) {
                 when (throwable) {
-                    is HttpException -> Resource.Error(throwable.message())
-                    is SocketTimeoutException -> Resource.Error("Error")
-                    is IOException -> Resource.Error("Error")
+                    is HttpException -> Resource.Error("HttpException: " + throwable.message())
+                    is SocketTimeoutException -> Resource.Error("SocketTimeoutException: " + throwable.message)
+                    is IOException -> Resource.Error("IOException: " + throwable.message)
                     else -> {
-                        Resource.Error("Error")
+                        Resource.Error("else: " + throwable.message)
                     }
                 }
             }
