@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
 import com.ismailhakkiaydin.rickandmorty.base.BaseFragment
 import com.ismailhakkiaydin.rickandmorty.databinding.ActivityMainBinding
 import com.ismailhakkiaydin.rickandmorty.databinding.FragmentCharacterBinding
@@ -20,6 +21,8 @@ class CharacterFragment :
     ): View? {
         super.onCreateView(inflater, container, savedInstanceState)
 
+
+        viewModel.getCharacters("1")
         return binding?.root
 
     }
