@@ -2,7 +2,7 @@ package com.ismailhakkiaydin.rickandmorty.data.repository
 
 import com.ismailhakkiaydin.rickandmorty.base.BaseRepository
 import com.ismailhakkiaydin.rickandmorty.base.dispatcher.DispatcherProvider
-import com.ismailhakkiaydin.rickandmorty.data.model.Character
+import com.ismailhakkiaydin.rickandmorty.data.response.CharacterResponse
 import com.ismailhakkiaydin.rickandmorty.data.service.CharacterService
 import com.ismailhakkiaydin.rickandmorty.util.Resource
 import dagger.hilt.android.scopes.ActivityScoped
@@ -14,7 +14,7 @@ class CharacterRepository @Inject constructor(
     dispatcher: DispatcherProvider
 ) : BaseRepository(dispatcher = dispatcher) {
 
-    suspend fun getCharacters(page: String): Resource<Character?>? {
+    suspend fun getCharacters(page: String): Resource<CharacterResponse?>? {
         val networkResponse = safeApiCall {
             api.getCharacters(page = page)
         }
