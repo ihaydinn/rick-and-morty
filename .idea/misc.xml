@@ -3,9 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/bg_species.xml" value="0.1675" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_character.xml" value="0.2898550724637681" />
         <entry key="app/src/main/res/layout/fragment_character_detail.xml" value="0.2898550724637681" />
+        <entry key="app/src/main/res/layout/item_character.xml" value="0.375" />
       </map>
     </option>
   </component>
