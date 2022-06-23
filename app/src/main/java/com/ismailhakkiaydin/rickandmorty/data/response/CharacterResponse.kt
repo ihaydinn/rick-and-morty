@@ -1,7 +1,7 @@
-package com.ismailhakkiaydin.rickandmorty.data.model
+package com.ismailhakkiaydin.rickandmorty.data.response
 
 
-data class Character(
+data class CharacterResponse(
     val info: Info?,
     val results: List<Result?>?
 ) {
