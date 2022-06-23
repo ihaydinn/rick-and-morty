@@ -1,6 +1,5 @@
 package com.ismailhakkiaydin.rickandmorty.ui.chracter.adapter
 
-import android.annotation.SuppressLint
 import androidx.recyclerview.widget.RecyclerView
 import com.ismailhakkiaydin.rickandmorty.R
 import com.ismailhakkiaydin.rickandmorty.data.entity.Character
@@ -21,7 +20,6 @@ class CharacterViewHolder(
         }
     }
 
-    @SuppressLint("ResourceAsColor")
     fun bind(model: Character) {
         binding.apply {
             textViewName.text = model.name
